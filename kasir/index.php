@@ -59,6 +59,22 @@ exit;
                     </div>
                 </div>
             </div>
+            <!-- TOTAL OMZET -->
+                <div class="col-md-3">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h4>
+                                <i class="glyphicon glyphicon-usd"></i>
+                                <?php
+                                $total = mysqli_query($koneksi,"SELECT SUM(total_harga) AS total FROM penjualan");
+                                $t = mysqli_fetch_assoc($total);
+                                echo "Rp " . number_format($t['total'] ?? 0);
+                                ?>
+                            </h4>
+                            Total Penjualan
+                        </div>
+                    </div>
+                </div>
 </div>
 </div>
 </div>
