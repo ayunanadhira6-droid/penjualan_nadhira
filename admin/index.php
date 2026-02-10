@@ -88,14 +88,14 @@ if ($_SESSION['user_status'] != 1) {
                 <div class="col-md-3">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            <h4>
+                            <h1>
                                 <i class="glyphicon glyphicon-usd"></i>
                                 <?php
                                 $total = mysqli_query($koneksi,"SELECT SUM(total_harga) AS total FROM penjualan");
                                 $t = mysqli_fetch_assoc($total);
                                 echo "Rp " . number_format($t['total'] ?? 0);
                                 ?>
-                            </h4>
+                            </h1>
                             Total Penjualan
                         </div>
                     </div>
@@ -108,7 +108,7 @@ if ($_SESSION['user_status'] != 1) {
     <!-- DATA PENJUALAN -->
     <div class="panel">
         <div class="panel-heading">
-            <h4>Data Penjualan</h4>
+            <h4>Riwayat Data Penjualan</h4>
         </div>
 
         <div class="panel-body">
